@@ -7,30 +7,59 @@ let division = document.querySelector("#division");
 
 
 class Calculator{
-    firstValue;
-    secondValue;
-    construcor(firstValue, secondValue){
-        firstValue = this.firstValue,
-        secondValue = this.secondValue
+    constructor(firstValue, secondValue){
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
     }
     additionNumbs(){
-
-        return alert(this.firstValue + this.secondValue);
+        if (!Number(this.firstValue)) {this.firstValue = 0}
+        if (!Number(this.secondValue)) {this.secondValue = 0}
+       return console.log(this.firstValue + this.secondValue);
+        
     }
     subtraction(){
-        return this.firstValue - this.secondValue;
+        if (!Number(this.firstValue)) {this.firstValue = 0}
+        if (!Number(this.secondValue)) {this.secondValue = 0}
+        return console.log(this.firstValue - this.secondValue);
     }
     multiplication(){
-        return this.firstValue * this.secondValue;
+        if (!Number(this.firstValue)) {this.firstValue = 0}
+        if (!Number(this.secondValue)) {this.secondValue = 0}
+        return console.log(this.firstValue * this.secondValue);
     }
     division(){
-        return this.firstValue / this.secondValue;
+        if (!Number(this.firstValue)) {this.firstValue = 0}
+        if (!Number(this.secondValue)) {this.secondValue = 0}
+        return console.log(this.firstValue / this.secondValue);
     }
 }
 
-let res = new Calculator(Number(firstNumb.value), Number(secondNumber.value));
+function identif(){
+    let res = new Calculator(Number(firstNumb.value), Number(secondNumber.value));
+    return res;
+}
 
-addition.addEventListener("click", res.additionNumbs)
-subtraction.addEventListener("click", function(){
-    alert(firstNumb.value)
+addition.addEventListener("click", () => {
+    let result = identif()
+    result.additionNumbs()
+    firstNumb.value = "";
+    secondNumber.value = "";
+})
+subtraction.addEventListener("click", () =>{
+    let result = identif()
+    result.subtraction()
+    firstNumb.value = "";
+    secondNumber.value = "";
+})
+multiplication.addEventListener("click", () =>{
+    let result = identif()
+    result.multiplication()
+    firstNumb.value = "";
+    secondNumber.value = "";
+})
+division.addEventListener("click", () =>{
+    let result = identif()
+    result.division()
+    firstNumb.value = "";
+    secondNumber.value = "";
 })
