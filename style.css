@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 302px;
+    height: 500PX;
+    background-color: aqua;
+    margin: 70px auto 0;
+    border: 1px solid blue;
+    border-radius: 30px;
+}
+
+h1 {
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+#firstNumber {
+    height: 40px;
+    width: 147px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+
+#secondNumber {
+    height: 40px;
+    width: 147px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+
+.wrepp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+}
+
+.btn {
+    margin: 0 auto;
+    width: 40%;
+    height: 10%;
+}
