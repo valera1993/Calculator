@@ -43,6 +43,8 @@ h1 {
 
 .btn {
     margin: 0 auto;
-    width: 40%;
-    height: 10%;
+    width: 65%;
+    height: 17%;
+    border: 1px solid gray;
+    border-radius: 15px;
 }
